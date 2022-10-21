@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">mtbcycleAFRICA</string>
+    <string name="Cycle">CYCLE AFRICA</string>
+    <string name="Login">LOGIN</string>
+    <string name="Signup">REGISTER</string>
+
+    <string name="LoginPageSignup">REGISTER</string>
+    <string name="LoginPageLogin">LOGIN</string>
+    <string name="Cycle_slogan">Your Cycling partner</string>
+    <string name="Cycle_Africa">CYCLE AFRICA</string>
+    <string name="Forgot">Reset Password</string>
+    <string name="create">Create Account</string>
+    <string name="welcome">Hi,</string>
+    <string name="AddProduct">Add Product</string>
+    <string name="showOrders">Show Orders</string>
+    <string name="showProduct">Show Products</string>
+    <string name="dashboard">DASHBOARD</string>
+    <string name="product">Product Details</string>
+    <string name="EditProduct">Edit Product</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="update">UPDATE</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="remove">Remove</string>
+    <string name="delivery">Delivery</string>
 </resources>
