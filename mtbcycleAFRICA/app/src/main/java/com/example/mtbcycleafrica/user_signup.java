@@ -31,6 +31,7 @@ public class user_signup extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
     TextView deliveryaddressTv;
+    private EmailValidator mEmailValidator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class user_signup extends AppCompatActivity {
         sign_phone = findViewById(R.id.sign_phone);
         register = findViewById(R.id.register);
         login = findViewById(R.id.login);
+        mEmailValidator = new EmailValidator();
 
         //Initialise Firebase
         firebaseAuth = FirebaseAuth.getInstance();
