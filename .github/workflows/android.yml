@@ -6,11 +6,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-<<<<<<< HEAD
-permissions:
-  contents: read
-=======
->>>>>>> b65bf79e74d47e1a2071a5d913b079b8389ae6fc
 
 jobs:
   test:
