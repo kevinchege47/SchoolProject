@@ -5,10 +5,11 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  permissions:
+    content:read
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +22,8 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     - name: Run Tests
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+  action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       run: ./gradlew test
 
     - name: Build with Gradle
