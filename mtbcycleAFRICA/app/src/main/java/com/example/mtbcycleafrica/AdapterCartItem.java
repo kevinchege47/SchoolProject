@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import p32929.androideasysql_library.Column;
-import p32929.androideasysql_library.EasyDB;
+//import p32929.androideasysql_library.Column;
+//import p32929.androideasysql_library.EasyDB;
 
 public class AdapterCartItem extends RecyclerView.Adapter<AdapterCartItem.HolderCartItem>{
 

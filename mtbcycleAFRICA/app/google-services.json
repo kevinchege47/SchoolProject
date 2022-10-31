@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1003151178617",
+    "project_id": "school-project-457e2",
+    "storage_bucket": "school-project-457e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003151178617:android:b09021c54fb009c6998da8",
+        "android_client_info": {
+          "package_name": "com.example.mtbcycleafrica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003151178617-k67up8fva5chplmsnko339e3pp26srbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzXNl6TGHrB5Y8V25TA8k-iPV0qM96Ulk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003151178617-k67up8fva5chplmsnko339e3pp26srbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
