@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".seller_dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="0dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/wave">
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/aldrich"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/first_card"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:elevation="5dp"
+            android:background="@drawable/cards">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/AddProduct"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aldrich"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/add_product" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:id="@+id/second_card"
+            android:layout_weight="1"
+            android:elevation="5dp"
+            android:background="@drawable/cards">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/showOrders"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/aldrich"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/list_orders" />
+
+        </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/third_card"
+                    android:layout_width="180dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cards"
+                    android:elevation="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/showProduct"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/aldrich"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/show_products" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="180dp"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:id="@+id/fourth_card"
+                    android:background="@drawable/cards"
+                    android:elevation="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/EditProfile"
+                        android:fontFamily="@font/aldrich"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/edit" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

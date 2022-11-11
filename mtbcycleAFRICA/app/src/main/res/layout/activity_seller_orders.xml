@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellerOrdersActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:padding="0dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/wave">
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/ordersRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/searchOrderEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toStartOf="@id/filterOrderBtn"
+                android:background="@drawable/cards"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="10dp"
+                android:hint="Search Orders"
+                android:padding="10dp" />
+            <ImageButton
+                android:id="@+id/filterOrderBtn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/categories"
+                android:layout_marginEnd="5dp"
+                />
+            <TextView
+                android:id="@+id/filteredOrdersTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/searchOrderEt"
+                android:textColor="@color/black"
+                android:text="Showing All"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ordersRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                app:reverseLayout="true"
+                app:stackFromEnd="true"
+                android:layout_below="@id/filteredOrdersTv"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_order_seller"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
