@@ -32,7 +32,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
     TextView orderIdTv,dateTv,orderStatusTv,emailTv,phoneTv,totalItemsTv,amountTv,deliveryTv;
     RecyclerView itemsRv;
     ImageButton editButton;
-
+    //firebase instance
     private FirebaseAuth firebaseAuth;
     private ArrayList<ModelOrdereditem> ordereditemArrayList;
     private AdapterOrdereditem adapterOrdereditem;
@@ -52,6 +52,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
         deliveryTv = findViewById(R.id.deliveryTv);
         itemsRv = findViewById(R.id.itemsRv);
         editButton = findViewById(R.id.editButton);
+        //initiaise firebase instance
         firebaseAuth =FirebaseAuth.getInstance();
 
 
@@ -86,6 +87,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
                 }).show();
     }
 
+    //method to edit order details such as cancelled, completed and in progress
     private void editOrderStatus(String selectedOption) {
         HashMap<String,Object> hashMap =new HashMap<>();
         hashMap.put("orderStatus",""+selectedOption);
@@ -106,7 +108,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
                     }
                 });
     }
-
+    //method to load order details
     private void loadOrderDetails() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.child(firebaseAuth.getUid()).child("Orders").child(orderId)
@@ -149,6 +151,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
                     }
                 });
     }
+    //method to load order items in an order
     private void loadOrderedItems(){
         ordereditemArrayList = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -174,7 +177,7 @@ public class OrderDetailsSellerActivity extends AppCompatActivity {
                 });
 
     }
-
+    //method to load customer info of customers who have made orders
     private void loadCustomerInfo() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.child(orderBy)

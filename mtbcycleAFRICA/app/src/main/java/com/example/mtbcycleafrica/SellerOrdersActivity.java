@@ -26,6 +26,7 @@ public class SellerOrdersActivity extends AppCompatActivity {
     ImageButton filterOrderBtn;
     TextView filteredOrdersTv;
     RecyclerView ordersRV;
+    //firebase instance
     FirebaseAuth firebaseAuth;
     private ArrayList<ModelOrderShop> orderShopArrayList;
     private AdapterOrderShop adapterOrderShop;
@@ -36,6 +37,7 @@ public class SellerOrdersActivity extends AppCompatActivity {
         ordersRV = findViewById(R.id.ordersRV);
         filteredOrdersTv = findViewById(R.id.filteredOrdersTv);
         filterOrderBtn = findViewById(R.id.filterOrderBtn);
+        //initialise firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
         loadallorders();
 
@@ -65,7 +67,7 @@ public class SellerOrdersActivity extends AppCompatActivity {
             }
         });
     }
-
+    //load all seller orders
     private void loadallorders() {
         orderShopArrayList = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");

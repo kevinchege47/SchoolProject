@@ -24,6 +24,7 @@ public class OrderDetailsUsersActivity extends AppCompatActivity {
     private String orderTo,orderId;
     TextView orderIdTv,dateTv,orderStatusTv,sellerNameTv,totalItemsTv,amountTv,addressTv;
     RecyclerView itemsRv;
+    //firebase instance
     private FirebaseAuth firebaseAuth;
 
     private ArrayList <ModelOrdereditem> ordereditemArrayList;
@@ -44,13 +45,14 @@ public class OrderDetailsUsersActivity extends AppCompatActivity {
         amountTv = findViewById(R.id.amountTv);
         itemsRv = findViewById(R.id.itemsRv);
         addressTv = findViewById(R.id.addressTv);
+        //initialise firebase auth
         firebaseAuth = FirebaseAuth.getInstance();
         loadSellerInfo();
         loadOrderDetails();
         loadOrderedItems();
 
     }
-
+    //method to load items
     private void loadOrderedItems() {
         ordereditemArrayList = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -75,7 +77,7 @@ public class OrderDetailsUsersActivity extends AppCompatActivity {
                 });
 
     }
-
+    //method to load order details
     private void loadOrderDetails() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.child(orderTo).child("Orders").child(orderId)
@@ -119,7 +121,7 @@ public class OrderDetailsUsersActivity extends AppCompatActivity {
                 });
 
     }
-
+    //method to load seller info
     private void loadSellerInfo() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.child(orderTo)

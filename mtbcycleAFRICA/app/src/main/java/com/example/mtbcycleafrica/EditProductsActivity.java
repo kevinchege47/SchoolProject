@@ -60,7 +60,7 @@ public class EditProductsActivity extends AppCompatActivity {
     private String[] storagepermissions;
 
     private Uri image_uri;
-
+    //firebase instance
     FirebaseAuth firebaseAuth;
 
     ProgressDialog progressDialog;
@@ -85,8 +85,9 @@ public class EditProductsActivity extends AppCompatActivity {
 
         discount_price.setVisibility(View.GONE);
         discount_note .setVisibility(View.GONE);
-
+        //initiate the firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
+        //method to get products from the database
         loadProductDetails();
 
         progressDialog = new ProgressDialog(this);
@@ -138,6 +139,7 @@ public class EditProductsActivity extends AppCompatActivity {
 
     }
     private void loadProductDetails(){
+        //Getting the products from DB
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
         reference.child(firebaseAuth.getUid()).child("Products").child(productId)
                 .addValueEventListener(new ValueEventListener() {
@@ -192,6 +194,7 @@ public class EditProductsActivity extends AppCompatActivity {
                 });
 
     }
+    //Update products with new details
     private void updateProduct() {
         progressDialog.setMessage("Updating Product");
         progressDialog.show();
@@ -287,6 +290,7 @@ public class EditProductsActivity extends AppCompatActivity {
     }
     private String producttitle,productdescription,productcategory,originalprice,discountprice,productQuantity,discountNote;
     private Boolean discountAvailable = false;
+
     private void inputData() {
         producttitle = product_title.getEditText().getText().toString().trim();
         productdescription = product_description.getEditText().getText().toString().trim();

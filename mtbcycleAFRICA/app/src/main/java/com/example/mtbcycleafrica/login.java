@@ -38,6 +38,7 @@ import com.google.android.material.textfield.TextInputLayout;
 public class login extends AppCompatActivity {
     TextInputLayout login_email, login_password;
     Button login_button, signup_button, forgetpassword_button;
+    //FIREBASE INSTANCE
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -50,6 +51,7 @@ public class login extends AppCompatActivity {
         login_button = findViewById(R.id.login_button);
         signup_button = findViewById(R.id.signup_button);
         forgetpassword_button = findViewById(R.id.forgetpassword_button);
+        //Initialise firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
 
     }
@@ -74,7 +76,7 @@ public class login extends AppCompatActivity {
     }
 
     String _email, _password;
-
+    //method to allow user to login
     private void loginUser() {
         String _email = login_email.getEditText().getText().toString();
         String _password = login_password.getEditText().getText().toString();
@@ -100,7 +102,7 @@ public class login extends AppCompatActivity {
                     }
                 });
     }
-
+    //check if user is buyer or seller to know the screen to navigate to
     private void checkUsertype() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.orderByChild("uid").equalTo(firebaseAuth.getUid())

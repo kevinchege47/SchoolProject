@@ -28,6 +28,7 @@ public class user_signup extends AppCompatActivity {
     //String _phone, _username, _email, _password;
     TextInputLayout sign_username, sign_email, sign_password, sign_phone;
     Button register, login;
+    //Firebase instance
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
     TextView deliveryaddressTv;
@@ -99,7 +100,7 @@ public class user_signup extends AppCompatActivity {
 
     }
 
-
+    //method to create user
     private void createAccount() {
         //initialise email and password
         firebaseAuth.createUserWithEmailAndPassword(_email, _password)
@@ -122,7 +123,7 @@ public class user_signup extends AppCompatActivity {
 
     }
 
-
+    //method to save created user data to DB
     private void saveFirebasedata() {
 
         //Toast.makeText(this, ""+_phone+" "+_username+" "+_email+" "+_password, Toast.LENGTH_SHORT).show();

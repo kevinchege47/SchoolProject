@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class FirstBuyerDashboard extends AppCompatActivity {
     TextView tabSellersTv,tabOrdersTv;
     RelativeLayout sellersRl,ordersRl;
+    //firebase instance
     FirebaseAuth firebaseAuth;
     RecyclerView shopsRv,ordersRv;
 
@@ -43,6 +44,7 @@ public class FirstBuyerDashboard extends AppCompatActivity {
         ordersRl = findViewById(R.id.ordersRl);
         shopsRv = findViewById(R.id.shopsRv);
         ordersRv = findViewById(R.id.ordersRv);
+        //initialise firebse instance
         firebaseAuth = FirebaseAuth.getInstance();
 
         checkUser();
@@ -114,7 +116,7 @@ public class FirstBuyerDashboard extends AppCompatActivity {
                     }
                 });
     }
-
+    //load orders from DB
     private void loadOrders() {
         ordersList = new ArrayList<>();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -160,7 +162,7 @@ public class FirstBuyerDashboard extends AppCompatActivity {
 
     }
 
-
+    //load available sellers from DB
     private void loadShops() {
 
         sellerList = new ArrayList<>();

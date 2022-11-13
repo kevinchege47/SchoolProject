@@ -29,6 +29,7 @@ public class ShowProducts extends AppCompatActivity {
     ImageButton filterProductBtn;
     TextView filteredProductsTv;
     RecyclerView productsRV;
+    //firebase instance
     FirebaseAuth firebaseAuth;
     ProgressDialog progressDialog;
     private ArrayList<ModelProduct> productList;
@@ -46,6 +47,7 @@ public class ShowProducts extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please Wait");
         progressDialog.setCanceledOnTouchOutside(false);
+        //initialise firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
         loadAllProducts();
         searchProductEt.addTextChangedListener(new TextWatcher() {
@@ -119,7 +121,7 @@ public class ShowProducts extends AppCompatActivity {
                 });
 
     }
-
+    //method to load products
     private void loadAllProducts() {
         productList = new ArrayList<>();
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");

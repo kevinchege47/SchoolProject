@@ -68,7 +68,7 @@ public class profileEditSeller extends AppCompatActivity {
             loadInfo();
         }
     }
-
+    //method to edit seller profile
     private void loadInfo() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.orderByChild("uid").equalTo(firebaseAuth.getUid())
@@ -106,10 +106,8 @@ public class profileEditSeller extends AppCompatActivity {
             phone = sign_phone.getEditText().getText().toString().trim();
             password = sign_password.getEditText().getText().toString().trim();
             updateProfile();
-
-
     }
-
+    //method to save new seller info to DB
     private void updateProfile() {
         progressDialog.setMessage("Updating Profile");
         progressDialog.show();

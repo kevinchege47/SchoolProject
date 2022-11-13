@@ -32,7 +32,7 @@ public class ProfileEditUserActivity extends AppCompatActivity {
     TextView deliveryaddressTv;
     Button update;
     ProgressDialog progressDialog;
-
+    //firebase instance
     FirebaseAuth firebaseAuth;
 
 
@@ -50,7 +50,7 @@ public class ProfileEditUserActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Please Wait");
         progressDialog.setCanceledOnTouchOutside(false);
-
+        //initialise firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
         checkUser();
 
@@ -83,7 +83,7 @@ public class ProfileEditUserActivity extends AppCompatActivity {
         deliveryaddress = deliveryaddressTv.getText().toString();
         updateProfile();
     }
-
+    //update buyer profile to DB
     private void updateProfile() {
         String timestamp = "" + System.currentTimeMillis();
         HashMap<String, Object> hashMap = new HashMap<>();
@@ -129,7 +129,7 @@ public class ProfileEditUserActivity extends AppCompatActivity {
             loadInfo();
         }
     }
-
+    //LOAD BUYER info from DB
     private void loadInfo() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         ref.orderByChild("uid").equalTo(firebaseAuth.getUid())

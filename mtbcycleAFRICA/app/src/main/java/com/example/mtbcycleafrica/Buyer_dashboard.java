@@ -39,7 +39,7 @@ import p32929.androideasysql_library.Column;
 import p32929.androideasysql_library.EasyDB;
 
 public class Buyer_dashboard extends AppCompatActivity {
-
+    //firebase instance
     FirebaseAuth firebaseAuth;
     ImageButton editProfileButton,cartButton;
     EditText searchProductEt;
@@ -256,7 +256,7 @@ public class Buyer_dashboard extends AppCompatActivity {
         });
 
     }
-
+    //Store order to DB
     private void submitOrder() {
         progressDialog.setMessage("Placing Order");
         progressDialog.show();
@@ -311,7 +311,7 @@ public class Buyer_dashboard extends AppCompatActivity {
                     }
                 });
     }
-
+    //load the products associated with a particular branch
     private void loadShopProducts() {
         //DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
         //ref.orderByChild("accounttype").equalTo("seller").orderByChild("Products")

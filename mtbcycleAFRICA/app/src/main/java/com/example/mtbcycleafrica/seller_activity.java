@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class seller_activity extends AppCompatActivity {
     TextView name_text;
+    //Firebase Instance
     FirebaseAuth firebaseAuth;
     Button logout;
     ImageButton editProfileButton;
@@ -39,6 +40,7 @@ public class seller_activity extends AppCompatActivity {
         name_text = findViewById(R.id.name);
         logout = findViewById(R.id.logout_button);
         editProfileButton = findViewById(R.id.editProfileButton);
+        //initialise firebase instance
         firebaseAuth = FirebaseAuth.getInstance();
         checkUser();
 
