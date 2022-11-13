@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dashboard"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/aldrich"
+
             android:textSize="25sp"
             android:textColor="@color/black"/>
     <LinearLayout
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/AddProduct"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/aldrich"
+
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_centerHorizontal="true"/>
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/showOrders"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/aldrich"
+
                 android:textColor="@color/black"
                 android:layout_centerHorizontal="true"/>
 
@@ -113,7 +113,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/showProduct"
                         android:layout_marginTop="10dp"
-                        android:fontFamily="@font/aldrich"
+
                         android:textColor="@color/black"
                         android:textSize="15sp"
                         android:layout_centerHorizontal="true"/>
@@ -136,7 +136,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/EditProfile"
-                        android:fontFamily="@font/aldrich"
+
                         android:layout_marginTop="10dp"
                         android:textColor="@color/black"
                         android:textSize="15sp"

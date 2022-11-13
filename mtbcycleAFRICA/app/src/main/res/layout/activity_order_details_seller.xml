@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/order_details"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/aldrich"
+
         android:textSize="25sp"
         android:textColor="@color/black"/>
     <androidx.cardview.widget.CardView
@@ -192,7 +192,7 @@
         android:layout_height="wrap_content"
         android:text="Ordered Items"
         android:layout_gravity="center"
-        android:fontFamily="@font/aldrich"
+
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>

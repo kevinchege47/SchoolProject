@@ -26,7 +26,7 @@
             android:id="@+id/welcomemessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alex_brush"
+
             android:text="@string/welcome"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -34,7 +34,7 @@
             android:id="@+id/welcomename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/aldrich"
+
             android:textColor="@color/black"
             android:textSize="25sp" />
     </LinearLayout>

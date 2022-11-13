@@ -20,6 +20,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import p32929.androideasysql_library.Column;
+import p32929.androideasysql_library.EasyDB;
 //
 //import p32929.androideasysql_library.Column;
 //import p32929.androideasysql_library.EasyDB;

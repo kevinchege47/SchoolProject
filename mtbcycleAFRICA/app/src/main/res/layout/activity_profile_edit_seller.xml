@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/aldrich"
+
                 android:text="@string/EditProfile"
                 android:textColor="@android:color/black"
                 android:textSize="40sp" />

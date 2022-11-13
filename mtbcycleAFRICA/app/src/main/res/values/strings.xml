@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mtbcycleAFRICA</string>
+    <string name="app_name">mtbcycle</string>
     <string name="Cycle">CYCLE AFRICA</string>
     <string name="Login">LOGIN</string>
     <string name="Signup">REGISTER</string>
@@ -22,4 +22,6 @@
     <string name="add_to_cart">Add to Cart</string>
     <string name="remove">Remove</string>
     <string name="delivery">Delivery</string>
+    <string name="order_details">ORDER DETAILS</string>
+    <string name="date">Date</string>
 </resources>
