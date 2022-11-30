@@ -1,4 +1,4 @@
-Tools Used
+#Tools Used
 -Java
 -Gradle
 -github
@@ -7,6 +7,6 @@ Tools Used
 -Adobe XD(UI Design)
 -Firebase Real time database
 -Firebase Cloud Storage
-Env
+#Env
 -Windows 10 OS
 -Android Studio
